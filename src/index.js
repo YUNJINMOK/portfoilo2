@@ -4,6 +4,7 @@ import "./index.css";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
+import Navbar from "./router/Navbar";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,11 @@ const router = createBrowserRouter([
         path: "",
         element: <App />,
       },
+      {
+        path: "/nav",
+        element: <Navbar />,
+      },
+    
     ],
   },
 ]);
