@@ -22,7 +22,7 @@ export default function Home() {
                             <span className="text-black">Web</span>
                             <Typewriter
                                 words={[' Programmer', ' Publisher', ' Designer']}
-                                loop={1}
+                                loop={0}
                                 cursor
                                 cursorStyle="_"
                                 typeSpeed={100}
@@ -36,16 +36,16 @@ export default function Home() {
                             맡은 일은 책임감을 갖고 끝까지 해냅니다.
                         </span>
                     </div>
-                    {/* 캐러셀 */}
+                    {/* 이미지 */}
                     <div className=" relative w-1/3 h-full">
                         <div className=" absolute -left-[10%] top-[10%] w-[400px] h-[200px]">
                             <img className="w-full h-full object-cover" src={img3} alt="img3" />
                         </div>
                         <div className="absolute left-[10%] top-[20%] w-[400px] h-[200px] ">
-                            <img className="  w-full h-full object-cover" src={img2} alt="img2" />
+                            <img className="  w-full h-full object-contain" src={img2} alt="img2" />
                         </div>
                         <div className="absolute left-[30%] top-[30%] w-[400px] h-[200px]">
-                            <img className="w-full h-full object-cover" src={img1} alt="img1" />
+                            <img className="w-full h-full object-contain" src={img1} alt="img1" />
                         </div>
                     </div>
                 </div>
