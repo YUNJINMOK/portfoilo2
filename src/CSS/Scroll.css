@@ -1,0 +1,14 @@
+/* IE 및 Edge에서 스크롤바 숨김 */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+}
+
+/* Firefox에서 스크롤바 숨김 */
+.scrollbar-hide {
+    scrollbar-width: none;
+}
+
+/* Chrome, Safari, Opera에서 스크롤바 숨김 */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
