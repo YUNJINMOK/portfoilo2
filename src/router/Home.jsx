@@ -30,7 +30,7 @@ export default function Home() {
                                 delaySpeed={1000}
                             />
                         </span>
-                        <span className="mt-6 py-10">
+                        <span className="mt-6 py-10 font-semibold">
                             새로운 도전을 두려워하지 않으며,
                             <br />
                             맡은 일은 책임감을 갖고 끝까지 해냅니다.

@@ -25,8 +25,15 @@ export default function About() {
                     className="w-full h-screen overflow-y-scroll scrollbar-hide"
                     onWheel={handleScroll}
                 >
-                    <div className="w-full h-screen bg-red-300"></div>
-                    <div className="w-full h-screen bg-slate-500"></div>
+                    <div className="w-full h-screen bg-gray-200 overflow-hidden">
+                        <div className="w-full h-full ml-[300px] flex justify-center p-8">
+                            <div className="max-w-4xl w-full h-full bg-white mr-[300px]  flex justify-center">
+                                <div className="w-1/2 h-full bg-red-300 "></div>
+                                <div className="w-1/2 h-full "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="w-full h-screen bg-gray-200"></div>
                 </div>
             </div>
         </Layout>
