@@ -28,7 +28,7 @@ export default function About() {
                     <div className="w-full h-screen bg-gray-200 overflow-hidden">
                         <div className="w-full h-full ml-[300px] flex justify-center p-8">
                             <div className="max-w-4xl w-full h-full bg-white mr-[300px]  flex justify-center">
-                                <div className="w-1/2 h-full bg-red-300 "></div>
+                                <div className="w-1/2 h-full bg-gray-600 "></div>
                                 <div className="w-1/2 h-full "></div>
                             </div>
                         </div>
