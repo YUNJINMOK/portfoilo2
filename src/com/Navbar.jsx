@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     return (
-        <div className="w-[300px] h-screen fixed left-0 bottom-0 flex flex-col  items-center shadow-md bg-[#ffff]">
+        <div className="w-[13%] h-screen fixed left-0 bottom-0 flex flex-col  items-center shadow-md bg-[#ffff]">
             <Link to="/" className="py-4 mt-[50px]">
                 <span className="font-semibold text-4xl">Hello!</span>
             </Link>

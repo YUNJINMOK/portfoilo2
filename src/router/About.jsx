@@ -28,7 +28,15 @@ export default function About() {
                     <div className="w-full h-screen bg-gray-200 overflow-hidden">
                         <div className="w-full h-full ml-[300px] flex justify-center p-8">
                             <div className="max-w-4xl w-full h-full bg-white mr-[300px]  flex justify-center">
-                                <div className="w-1/2 h-full bg-gray-600 "></div>
+                                <div className="w-1/2 h-full bg-gray-600 flex flex-col items-center py-16">
+                                    <div className="w-[200px] h-[200px] bg-gray-300 rounded-full flex justify-center items-center">
+                                        <div className="w-[190px] h-[190px] bg-white rounded-full"></div>
+                                    </div>
+                                    <div className="w-full h-[100px] flex flex-col justify-center items-center gap-2">
+                                        <span className="text-2xl font-semibold text-white">윤진목</span>
+                                        <span className="text-xl font-semibold text-white">YUN JIN MOK</span>
+                                    </div>
+                                </div>
                                 <div className="w-1/2 h-full "></div>
                             </div>
                         </div>
