@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import Layout from '../com/Layout';
 import '../CSS/Scroll.css';
+import { RiScrollToBottomFill } from 'react-icons/ri';
 
 export default function About() {
     const scrollContainerRef = useRef(null);
@@ -25,9 +26,13 @@ export default function About() {
                     className="w-full h-screen overflow-y-scroll scrollbar-hide"
                     onWheel={handleScroll}
                 >
-                    <div className="w-full h-screen bg-gray-200 overflow-hidden">
+                    <div className="relative w-full h-screen bg-gray-200  overflow-hidden">
+                        <div className="absolute w-[150px] h-[100px]  bottom-[5%] right-[5%] z-10 flex flex-col justify-center items-center gap-4">
+                            <span className="text-2xl font-semibold text-blue-600 animate-shake ">Scroll</span>
+                            <RiScrollToBottomFill className="text-4xl text-blue-600 animate-shake" />
+                        </div>
                         <div className="w-full h-full ml-[300px] flex justify-center p-8">
-                            <div className="max-w-4xl w-full h-full bg-white mr-[300px]  flex justify-center rounded-xl overflow-hidden">
+                            <div className="max-w-4xl w-full h-full bg-white mr-[300px]  flex justify-center rounded-xl shadow-lg overflow-hidden">
                                 <div className="w-1/3 h-full bg-blue-100 flex flex-col items-center py-10 ">
                                     <div className="w-[160px] h-[160px] bg-blue-500 rounded-full flex justify-center items-center z-10">
                                         <div className="w-[150px] h-[150px] bg-white rounded-full z-10"></div>
@@ -134,6 +139,7 @@ export default function About() {
                             </div>
                         </div>
                     </div>
+                    {/* 스크롤 2번쨰 페이지 */}
                     <div className="w-full h-screen bg-gray-200"></div>
                 </div>
             </div>
