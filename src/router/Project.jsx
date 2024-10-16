@@ -140,7 +140,7 @@ export default function Project() {
                                     {images.slice(3).map((image) => (
                                         <img
                                             key={image.src}
-                                            className="w-[350px] h-[200px] object-cover rounded-lg cursor-pointer"
+                                            className="w-[350px] h-[200px] object-cover rounded-lg cursor-pointer shadow-md"
                                             src={image.src}
                                             alt={image.title}
                                             onClick={() => openPopup(image)}
@@ -153,7 +153,7 @@ export default function Project() {
                                     {images.slice(0, 3).map((image) => (
                                         <img
                                             key={image.src}
-                                            className="w-[350px] h-[200px] object-cover rounded-lg cursor-pointer"
+                                            className="w-[350px] h-[200px] object-cover rounded-lg cursor-pointer shadow-md"
                                             src={image.src}
                                             alt={image.title}
                                             onClick={() => openPopup(image)}
