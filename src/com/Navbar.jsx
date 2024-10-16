@@ -18,9 +18,9 @@ export default function Navbar() {
                         About
                     </div>
                 </Link>
-                <Link to="/">
+                <Link to="/project">
                     <div className="font-semibold text-xl border-b border-gray-300 w-[120px] text-center mb-4 pb-4 cursor-pointer">
-                        Portfoilo
+                        Project
                     </div>
                 </Link>
             </div>

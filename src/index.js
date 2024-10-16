@@ -6,6 +6,8 @@ import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import App from './App';
 import About from './router/About';
 
+import Project from './router/Project';
+
 const router = createBrowserRouter([
     {
         path: '',
@@ -18,6 +20,10 @@ const router = createBrowserRouter([
             {
                 path: '/about',
                 element: <About />,
+            },
+            {
+                path: '/project',
+                element: <Project />,
             },
         ],
     },
