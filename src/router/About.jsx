@@ -98,7 +98,7 @@ export default function About() {
                                                     <div className=" flex items-end gap-3">
                                                         <span className="text-sm font-semibold">2018.04 ~ 2019.02</span>
                                                         <span className="text-lg font-semibold">
-                                                            계명문화대학교(건축인테리어과)자퇴
+                                                            계명문화대학교(건축인테리어과)중퇴
                                                         </span>
                                                     </div>
                                                 </div>

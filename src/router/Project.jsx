@@ -25,7 +25,7 @@ export default function Project() {
             effect: '음식 알레르가 있는 아이들의 위험성 감소',
             role: 'UI/UX 디자인',
             skills: 'React,express,MySQL,Photoshop,Figma',
-            ppt: 'https://www.canva.com/design/DAGCcMc707o/WzC2n1-wJkT-yinrgsc9yQ/edit',
+            ppt: 'https://www.canva.com/design/DAGCcMc707o/WzC2n1-wJkT-yinrgsc9yQ/edit?utm_content=DAGCcMc707o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
             url: 'https://kidcare.netlify.app/',
         },
         {
@@ -35,35 +35,35 @@ export default function Project() {
             effect: '대구 수목원 홍보,대구 지역 경제 활성화에 기여',
             role: '퍼블리셔',
             skills: 'React,express,MySQL,Photoshop,Figma,Android Studio',
-            ppt: 'https://www.canva.com/design/DAGFWDgziEA/ZDHAVyoTebB7ZH14JLD1bg/edit',
+            ppt: 'https://www.canva.com/design/DAGFWDgziEA/ZDHAVyoTebB7ZH14JLD1bg/edit?utm_content=DAGFWDgziEA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
             url: 'https://daegusumokwon.netlify.app/',
         },
         {
             src: img1,
             title: 'Cocar',
-            intention: '커뮤니티 플랫폼 홍보',
+            intention: '렌트카 홈페이지',
             effect: '이용자 수 증가',
-            role: '프론트 엔드',
+
             skills: 'JavaScript, CSS, HTML',
-            url: '',
+            url: 'https://mellow-yeot-2bd0b6.netlify.app/',
         },
         {
             src: img2,
-            title: '마블',
+            title: '마블 클론',
             intention: '영화 정보 제공',
             effect: '이용자 만족도 증가',
-            role: '프론트 엔드',
-            skills: 'JavaScript, CSS, HTML',
-            url: '',
+
+            skills: 'React',
+            url: 'https://effulgent-alfajores-5b2deb.netlify.app/',
         },
         {
             src: img3,
-            title: 'TMDB',
+            title: 'TMDB 클론',
             intention: '영화 데이터베이스 제공',
             effect: '정보 제공 효율화',
-            role: '프론트 엔드',
-            skills: 'JavaScript, CSS, HTML',
-            url: '',
+
+            skills: 'React',
+            url: 'https://polite-moxie-f47304.netlify.app/',
         },
     ];
 
@@ -190,7 +190,9 @@ export default function Project() {
                                         <span className="font-semibold text-xl">주제: {popupImage.title}</span>
                                         <span className="font-semibold text-xl">계획 의도: {popupImage.intention}</span>
                                         <span className="font-semibold text-xl">기대 효과: {popupImage.effect}</span>
-                                        <span className="font-semibold text-xl">담당 직무: {popupImage.role}</span>
+                                        {popupImage.role && (
+                                            <span className="font-semibold text-xl">담당 직무: {popupImage.role}</span>
+                                        )}
                                         <span className="font-semibold text-xl">사용 스킬: {popupImage.skills}</span>
 
                                         <span className="font-semibold text-xl">
@@ -204,6 +206,17 @@ export default function Project() {
                                                 {popupImage.url}
                                             </a>
                                         </span>
+                                        {popupImage.ppt && (
+                                            <a
+                                                href={popupImage.ppt}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-blue-500 hover:underline"
+                                            >
+                                                {' '}
+                                                PPT
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             </div>
