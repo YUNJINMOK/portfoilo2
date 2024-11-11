@@ -89,7 +89,7 @@ export default function Project() {
         return (
             <Layout>
                 <div className="w-full h-screen flex justify-center items-center bg-gray-200">
-                    <div className="w-full max-w-5xl h-[800px] bg-white py-10 flex flex-col items-center">
+                    <div className="w-full lg:max-w-5xl h-[800px] bg-white py-10 flex flex-col items-center  md:max-w-3xl lg:ml-[300px] md:ml-0">
                         {/* 카테고리 버튼들 */}
                         <div className="w-full max-w-2xl h-[50px] bg-gray-200 rounded-full flex justify-center">
                             <div className="w-full max-w-xl h-full flex">

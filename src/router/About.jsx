@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import Layout from '../com/Layout';
 import '../CSS/Scroll.css';
 import { RiScrollToBottomFill } from 'react-icons/ri';
+import myimg from '../img/myimg.jpg';
 
 export default function About() {
     const scrollContainerRef = useRef(null);
@@ -35,7 +36,9 @@ export default function About() {
                             <div className="max-w-4xl w-full h-full bg-white mr-[300px]  flex justify-center rounded-xl shadow-lg overflow-hidden">
                                 <div className="w-1/3 h-full bg-blue-100 flex flex-col items-center py-10 ">
                                     <div className="w-[160px] h-[160px] bg-blue-500 rounded-full flex justify-center items-center z-10">
-                                        <div className="w-[150px] h-[150px] bg-white rounded-full z-10"></div>
+                                        <div className="w-[150px] h-[150px] bg-white rounded-full z-10 overflow-hidden">
+                                            <img className="object-cover" src={myimg} alt="myimg" />
+                                        </div>
                                     </div>
                                     <div className="w-full h-2/3  flex justify-center mt-4  ">
                                         <div className="max-w-[250px] w-full h-full overflow-hidden ">
