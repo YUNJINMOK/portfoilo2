@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import Layout from '../com/Layout';
 import '../CSS/Scroll.css';
-import { RiScrollToBottomFill } from 'react-icons/ri';
 import myimg from '../img/myimg.jpg';
 
 export default function About() {
@@ -28,10 +27,6 @@ export default function About() {
                     onWheel={handleScroll}
                 >
                     <div className="relative w-full h-screen bg-gray-200  overflow-hidden">
-                        <div className="absolute w-[150px] h-[100px]  bottom-[5%] right-[5%] z-10 flex flex-col justify-center items-center gap-4">
-                            <span className="text-2xl font-semibold text-blue-600 animate-shake ">Scroll</span>
-                            <RiScrollToBottomFill className="text-4xl text-blue-600 animate-shake" />
-                        </div>
                         <div className="w-full h-full ml-[300px] flex justify-center p-8">
                             <div className="max-w-4xl w-full h-full bg-white mr-[300px]  flex justify-center rounded-xl shadow-lg overflow-hidden">
                                 <div className="w-1/3 h-full bg-blue-100 flex flex-col items-center py-10 ">
@@ -137,50 +132,6 @@ export default function About() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* 스크롤 2번쨰 페이지 */}
-                    <div className="w-full h-screen bg-gray-200 flex justify-center items-center">
-                        <div className="w-full max-w-4xl h-[500px] bg-white ml-[300px] rounded-lg overflow-hidden shadow-lg flex-col">
-                            <div className="w-full h-[50px]  flex justify-center items-center border-b-2 border-blue-600">
-                                <span className="font-bold text-2xl ">보유스킬</span>
-                            </div>
-                            <div className="w-full h-full flex">
-                                <div className="w-1/3 h-full border-r-2 border-blue-600 flex-col justify-center items-center">
-                                    <div className="w-full h-[30px] border-b-2 border-blue-600 text-center font-semibold text-lg ">
-                                        Dev
-                                    </div>
-                                    <div className="w-full h-full flex flex-col items-center py-10 gap-4">
-                                        <span className="font-medium text-lg">JavaScript</span>
-
-                                        <span className="font-medium text-lg">Node</span>
-                                        <span className="font-medium text-lg">php</span>
-                                        <span className="font-medium text-lg">mysql</span>
-                                    </div>
-                                </div>
-                                <div className="w-1/3 h-full border-r-2 border-blue-600">
-                                    <div className="w-full h-[30px] border-b-2 border-blue-600 text-center font-semibold text-lg ">
-                                        Design
-                                    </div>
-                                    <div className="w-full h-full flex flex-col items-center py-10 gap-4">
-                                        <span className="font-medium text-lg">Figma</span>
-                                        <span className="font-medium text-lg">Adobe XD</span>
-                                        <span className="font-medium text-lg">photoshop</span>
-                                        <span className="font-medium text-lg">Illustrator</span>
-                                    </div>
-                                </div>
-                                <div className="w-1/3 h-full ">
-                                    <div className="w-full h-[30px] border-b-2 border-blue-600 text-center font-semibold text-lg ">
-                                        Publisher
-                                    </div>
-                                    <div className="w-full h-full flex flex-col items-center py-10 gap-4">
-                                        <span className="font-medium text-lg">html</span>
-                                        <span className="font-medium text-lg">css</span>
-                                        <span className="font-medium text-lg">jquery</span>
-                                        <span className="font-medium text-lg">React</span>
                                     </div>
                                 </div>
                             </div>
