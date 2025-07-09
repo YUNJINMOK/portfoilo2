@@ -72,7 +72,7 @@ export default function Project() {
     return (
         <Layout>
             <div className="w-full h-screen flex justify-center items-center bg-gray-200">
-                <div className="w-full lg:max-w-5xl lg:h-[800px] bg-white py-10 flex flex-col items-center md:max-w-3xl lg:ml-[300px] md:ml-0 overflow-y-auto">
+                <div className="w-full lg:max-w-5xl lg:h-[800px] bg-white py-10 flex flex-col items-center md:max-w-3xl lg:ml-[300px] md:ml-0 lg:mt-0 mt-[260px]">
                     {/* 전체 프로젝트 이미지 목록 */}
                     <div className="w-full h-full flex flex-wrap gap-5 justify-center items-center">
                         {images.map((image) => (
