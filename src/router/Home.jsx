@@ -10,15 +10,15 @@ export default function Home() {
     return (
         <Layout>
             <div className="w-full h-screen flex justify-center items-center bg-gray-200">
-                <div className="w-full max-w-[800px] h-[600px] flex py-16">
-                    <div className="md:w-2/3 w-full p-2 h-full flex flex-col justify-center gap-6 ">
-                        <span className="font-semibold text-4xl">반갑습니다.</span>
-                        <span className="font-semibold text-4xl">
+                <div className="w-full max-w-[800px] h-[600px] flex py-16  lg:overflow-visible overflow-hidden p-2">
+                    <div className="md:w-2/3 w-full p-2 h-full flex flex-col justify-center items-center md:items-stretch gap-6 ">
+                        <span className="font-semibold lg:text-4xl text-2xl">반갑습니다.</span>
+                        <span className="font-semibold lg:text-4xl text-2xl">
                             <span className="text-red-500 pr-2">Web Creator</span>
                             윤진목 입니다.
                         </span>
-                        <span className="font-semibold text-4xl">저는 이러한 일을 합니다.</span>
-                        <span className="font-semibold text-4xl text-red-500">
+                        <span className="font-semibold lg:text-4xl text-2xl">저는 이러한 일을 합니다.</span>
+                        <span className="font-semibold lg:text-4xl text-2xl text-red-500">
                             <span className="text-black">Web</span>
                             <Typewriter
                                 words={[' Programmer', ' Publisher', ' Designer']}
@@ -38,13 +38,13 @@ export default function Home() {
                     </div>
                     {/* 이미지 */}
                     <div className=" relative w-1/3 h-full md:block hidden">
-                        <div className=" absolute -left-[10%] top-[10%] w-[400px] h-[200px]">
+                        <div className="absolute lg:-left-[10%] top-[10%] -left-[50%] w-[400px]  h-[200px]">
                             <img className="w-full h-full object-cover" src={img3} alt="img3" />
                         </div>
-                        <div className="absolute left-[10%] top-[20%] w-[400px] h-[200px] ">
+                        <div className="absolute lg:left-[10%] top-[25%] -left-[40%] w-[400px]  h-[200px] ">
                             <img className="  w-full h-full object-contain" src={img2} alt="img2" />
                         </div>
-                        <div className="absolute left-[30%] top-[30%] w-[400px] h-[200px]">
+                        <div className="absolute lg:left-[30%] top-[40%] -left-[30%] w-[400px] h-[200px]">
                             <img className="w-full h-full object-contain" src={img1} alt="img1" />
                         </div>
                     </div>

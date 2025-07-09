@@ -4,8 +4,8 @@ import teamimg1 from '../img/teamProject1.png';
 import teamimg2 from '../img/teamProject2.png';
 import teamimg3 from '../img/teamProject3.png';
 import img1 from '../img/poroject1.png';
-import img2 from '../img/project2.png';
 import img3 from '../img/project3.png';
+import { CgCloseR } from 'react-icons/cg';
 
 export default function Project() {
     const images = [
@@ -43,189 +43,107 @@ export default function Project() {
             title: 'Cocar',
             intention: '렌트카 홈페이지',
             effect: '이용자 수 증가',
-
             skills: 'JavaScript, CSS, HTML',
             url: 'https://mellow-yeot-2bd0b6.netlify.app/',
-        },
-        {
-            src: img2,
-            title: '마블 클론',
-            intention: '영화 정보 제공',
-            effect: '이용자 만족도 증가',
-
-            skills: 'React',
-            url: 'https://effulgent-alfajores-5b2deb.netlify.app/',
         },
         {
             src: img3,
             title: 'TMDB 클론',
             intention: '영화 데이터베이스 제공',
             effect: '정보 제공 효율화',
-
             skills: 'React',
             url: 'https://polite-moxie-f47304.netlify.app/',
         },
     ];
 
-    const ProjectToggle = () => {
-        const [selectedCategory, setSelectedCategory] = useState('All');
-        const [isPopupOpen, setIsPopupOpen] = useState(false);
-        const [popupImage, setPopupImage] = useState({});
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const [popupImage, setPopupImage] = useState({});
 
-        const handleCategoryClick = (category) => {
-            setSelectedCategory(category);
-        };
-
-        const openPopup = (image) => {
-            setPopupImage(image);
-            setIsPopupOpen(true);
-        };
-
-        const closePopup = () => {
-            setIsPopupOpen(false);
-            setPopupImage({});
-        };
-
-        return (
-            <Layout>
-                <div className="w-full h-screen flex justify-center items-center bg-gray-200">
-                    <div className="w-full lg:max-w-5xl h-[800px] bg-white py-10 flex flex-col items-center  md:max-w-3xl lg:ml-[300px] md:ml-0">
-                        {/* 카테고리 버튼들 */}
-                        <div className="w-full max-w-2xl h-[50px] bg-gray-200 rounded-full flex justify-center">
-                            <div className="w-full max-w-xl h-full flex">
-                                <div
-                                    className={`w-1/3 h-full flex justify-center items-center text-xl font-semibold cursor-pointer rounded-xl ${
-                                        selectedCategory === 'All' ? 'bg-red-300' : ''
-                                    }`}
-                                    onClick={() => handleCategoryClick('All')}
-                                >
-                                    All
-                                </div>
-                                <div
-                                    className={`w-1/3 h-full flex justify-center items-center text-xl font-semibold cursor-pointer rounded-xl ${
-                                        selectedCategory === '개인 프로젝트' ? 'bg-red-300' : ''
-                                    }`}
-                                    onClick={() => handleCategoryClick('개인 프로젝트')}
-                                >
-                                    개인 프로젝트
-                                </div>
-                                <div
-                                    className={`w-1/3 h-full flex justify-center items-center text-xl font-semibold cursor-pointer rounded-xl ${
-                                        selectedCategory === '팀 프로젝트' ? 'bg-red-300' : ''
-                                    }`}
-                                    onClick={() => handleCategoryClick('팀 프로젝트')}
-                                >
-                                    팀 프로젝트
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* 선택된 카테고리에 따른 콘텐츠 */}
-                        <div className="mt-10 w-full h-full flex justify-center items-center">
-                            {selectedCategory === 'All' && (
-                                <div className="w-full h-full flex flex-wrap gap-5 justify-center items-center">
-                                    {images.map((image) => (
-                                        <img
-                                            key={image.src}
-                                            className="w-[250px] h-[150px] object-cover rounded-lg cursor-pointer shadow-md"
-                                            src={image.src}
-                                            alt={image.title}
-                                            onClick={() => openPopup(image)} // 클릭 시 팝업 열기
-                                        />
-                                    ))}
-                                </div>
-                            )}
-                            {selectedCategory === '개인 프로젝트' && (
-                                <div className="w-full h-full flex flex-wrap gap-5 justify-center items-center">
-                                    {images.slice(3).map((image) => (
-                                        <img
-                                            key={image.src}
-                                            className="w-[350px] h-[200px] object-cover rounded-lg cursor-pointer shadow-md"
-                                            src={image.src}
-                                            alt={image.title}
-                                            onClick={() => openPopup(image)}
-                                        />
-                                    ))}
-                                </div>
-                            )}
-                            {selectedCategory === '팀 프로젝트' && (
-                                <div className="w-full h-full flex flex-wrap gap-5 justify-center items-center">
-                                    {images.slice(0, 3).map((image) => (
-                                        <img
-                                            key={image.src}
-                                            className="w-[350px] h-[200px] object-cover rounded-lg cursor-pointer shadow-md"
-                                            src={image.src}
-                                            alt={image.title}
-                                            onClick={() => openPopup(image)}
-                                        />
-                                    ))}
-                                </div>
-                            )}
-                        </div>
-                    </div>
-
-                    {/* 팝업 창 */}
-                    {isPopupOpen && (
-                        <div
-                            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
-                            onClick={closePopup} // 배경 클릭 시 팝업 닫기
-                        >
-                            <div
-                                className="relative bg-white w-[700px] h-[700px] p-5 rounded-lg shadow-lg"
-                                onClick={(e) => e.stopPropagation()} // 팝업 클릭 시 닫히지 않도록 설정
-                            >
-                                <button
-                                    className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
-                                    onClick={closePopup}
-                                >
-                                    닫기
-                                </button>
-                                <div className="w-full h-full flex flex-col items-center">
-                                    <img
-                                        src={popupImage.src} // 팝업에 보여줄 이미지
-                                        alt="팝업 이미지"
-                                        className="w-[400px] h-[200px] object-cover rounded-lg"
-                                    />
-                                    <div className="w-full h-full mt-5 flex flex-col items-start gap-4 p-10">
-                                        <span className="font-semibold text-xl">주제: {popupImage.title}</span>
-                                        <span className="font-semibold text-xl">계획 의도: {popupImage.intention}</span>
-                                        <span className="font-semibold text-xl">기대 효과: {popupImage.effect}</span>
-                                        {popupImage.role && (
-                                            <span className="font-semibold text-xl">담당 직무: {popupImage.role}</span>
-                                        )}
-                                        <span className="font-semibold text-xl">사용 스킬: {popupImage.skills}</span>
-
-                                        <span className="font-semibold text-xl">
-                                            주소:{' '}
-                                            <a
-                                                href={popupImage.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-blue-500 hover:underline"
-                                            >
-                                                {popupImage.url}
-                                            </a>
-                                        </span>
-                                        {popupImage.ppt && (
-                                            <a
-                                                href={popupImage.ppt}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-blue-500 hover:underline"
-                                            >
-                                                {' '}
-                                                PPT
-                                            </a>
-                                        )}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                </div>
-            </Layout>
-        );
+    const openPopup = (image) => {
+        setPopupImage(image);
+        setIsPopupOpen(true);
     };
 
-    return <ProjectToggle />; // ProjectToggle 컴포넌트를 반환
+    const closePopup = () => {
+        setIsPopupOpen(false);
+        setPopupImage({});
+    };
+
+    return (
+        <Layout>
+            <div className="w-full h-screen flex justify-center items-center bg-gray-200">
+                <div className="w-full lg:max-w-5xl lg:h-[800px] bg-white py-10 flex flex-col items-center md:max-w-3xl lg:ml-[300px] md:ml-0 overflow-y-auto">
+                    {/* 전체 프로젝트 이미지 목록 */}
+                    <div className="w-full h-full flex flex-wrap gap-5 justify-center items-center">
+                        {images.map((image) => (
+                            <img
+                                key={image.src}
+                                className="w-[300px] h-[180px] object-cover rounded-lg cursor-pointer shadow-md border border-gray-400"
+                                src={image.src}
+                                alt={image.title}
+                                onClick={() => openPopup(image)}
+                            />
+                        ))}
+                    </div>
+                </div>
+
+                {/* 팝업 창 */}
+                {isPopupOpen && (
+                    <div
+                        className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+                        onClick={closePopup}
+                    >
+                        <div
+                            className="relative bg-white w-[700px] h-[700px] p-5 rounded-lg shadow-lg"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <button
+                                className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+                                onClick={closePopup}
+                            >
+                                <CgCloseR className="text-xl" />
+                            </button>
+                            <div className="w-full h-full flex flex-col items-center">
+                                <img
+                                    src={popupImage.src}
+                                    alt="팝업 이미지"
+                                    className="w-[400px] h-[200px] object-cover rounded-lg"
+                                />
+                                <div className="w-full h-full mt-5 flex flex-col items-start gap-4 p-10">
+                                    <span className="font-semibold text-xl">주제: {popupImage.title}</span>
+                                    <span className="font-semibold text-xl">계획 의도: {popupImage.intention}</span>
+                                    <span className="font-semibold text-xl">기대 효과: {popupImage.effect}</span>
+                                    {popupImage.role && (
+                                        <span className="font-semibold text-xl">담당 직무: {popupImage.role}</span>
+                                    )}
+                                    <span className="font-semibold text-xl">사용 스킬: {popupImage.skills}</span>
+                                    <span className="font-semibold text-xl">
+                                        주소:{' '}
+                                        <a
+                                            href={popupImage.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-500 hover:underline"
+                                        >
+                                            {popupImage.url}
+                                        </a>
+                                    </span>
+                                    {popupImage.ppt && (
+                                        <a
+                                            href={popupImage.ppt}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-500 hover:underline"
+                                        >
+                                            PPT
+                                        </a>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </div>
+        </Layout>
+    );
 }
