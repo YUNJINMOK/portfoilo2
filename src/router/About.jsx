@@ -7,7 +7,7 @@ export default function About() {
 
     return (
         <Layout>
-            <div className="w-full bg-gray-200 overflow-hidden">
+            <div className="w-full bg-gray-200 overflow-hidden mt-[60px] lg:mt-0">
                 <div className="w-full h-screen ">
                     <div className=" w-full h-screen bg-gray-200  overflow-hidden">
                         <div className="w-full h-full lg:ml-[300px] lg:flex justify-center p-8">
@@ -21,7 +21,7 @@ export default function About() {
                                     <div className="w-full h-2/3  flex justify-center mt-4">
                                         <div className="lg:max-w-[250px] w-full h-full">
                                             <div className="w-full h-[60px] flex items-center">
-                                                <span className="lg:text-xl text-lg font-semibold text-blue-600">
+                                                <span className="lg:text-xl text-lg font-semibold text-blue-600 p-2">
                                                     개인 정보
                                                 </span>
                                                 <div className="flex-grow border-t border-blue-600 ml-4"></div>
@@ -37,7 +37,7 @@ export default function About() {
                                                 </span>
                                             </div>
                                             <div className="w-full h-[60px] flex items-center">
-                                                <span className="lg:text-xl text-lg font-semibold text-blue-600">
+                                                <span className="lg:text-xl text-lg font-semibold text-blue-600 p-2">
                                                     자격증
                                                 </span>
                                                 <div className="flex-grow border-t border-blue-600 ml-4"></div>
@@ -62,17 +62,17 @@ export default function About() {
                                 <div className="w-2/3 h-full flex flex-col items-center py-5 ">
                                     <div className="max-w-lg w-full h-full ">
                                         <div className="w-full h-[200px] flex flex-col gap-4 justify-center ">
-                                            <span className="lg:text-xl text-lg font-semibold ">
+                                            <span className="lg:text-xl text-lg font-semibold p-2 ">
                                                 성실하고 <span className="text-blue-600">열정</span> 넘치는
                                             </span>
-                                            <span className="lg:text-4xl text-2xl font-semibold">
+                                            <span className="lg:text-4xl text-2xl font-semibold p-2">
                                                 <span className="text-blue-600">윤진목</span> 입니다
                                             </span>
                                         </div>
                                         <div className="w-full h-full">
-                                            <div className="w-full h-[150px]">
+                                            <div className="w-full h-[200px]">
                                                 <div className="w-full h-[60px] flex items-center">
-                                                    <span className="lg:text-xl text-lg font-semibold text-blue-600">
+                                                    <span className="lg:text-xl text-lg font-semibold text-blue-600 p-2">
                                                         학력사항
                                                     </span>
                                                     <div className="flex-grow border-t border-blue-600 ml-4"></div>
@@ -80,21 +80,21 @@ export default function About() {
                                                 <div className="w-full h-[200px] ml-2 flex flex-col items-start gap-3">
                                                     <div className=" flex flex-col justify-center items-start">
                                                         <span className="text-sm font-semibold">2015.03 ~ 2018.02</span>
-                                                        <span className="lg:text-lg text-sm font-semibold">
+                                                        <span className="lg:text-lg text-sm font-semibold p-2">
                                                             경산 고등학교(졸업)
                                                         </span>
                                                     </div>
                                                     <div className=" flex flex-col justify-center items-start">
                                                         <span className="text-sm font-semibold">2018.04 ~ 2019.02</span>
-                                                        <span className="lg:text-lg text-sm font-semibold">
+                                                        <span className="lg:text-lg text-sm font-semibold p-2">
                                                             계명문화대학교(건축인테리어과)중퇴
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="w-full h-[150px]">
+                                            <div className="w-full h-[200px]">
                                                 <div className="w-full h-[60px] flex items-center">
-                                                    <span className="lg:text-xl text-lg font-semibold text-blue-600">
+                                                    <span className="lg:text-xl text-lg font-semibold text-blue-600 p-2">
                                                         교육
                                                     </span>
                                                     <div className="flex-grow border-t border-blue-600 ml-4"></div>
@@ -113,7 +113,7 @@ export default function About() {
                                             </div>
                                             <div className="w-full h-[150px]">
                                                 <div className="w-full h-[60px] flex items-center">
-                                                    <span className="lg:text-xl text-lg font-semibold text-blue-600">
+                                                    <span className="lg:text-xl text-lg font-semibold text-blue-600 lg:p-0 p-2">
                                                         수상
                                                     </span>
                                                     <div className="flex-grow border-t border-blue-600 ml-4"></div>

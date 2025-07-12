@@ -71,8 +71,8 @@ export default function Project() {
 
     return (
         <Layout>
-            <div className="w-full h-screen flex justify-center items-center bg-gray-200">
-                <div className="w-full lg:max-w-5xl lg:h-[800px] bg-white py-10 flex flex-col items-center md:max-w-3xl lg:ml-[300px] md:ml-0 lg:mt-0 mt-[260px]">
+            <div className="w-full h-screen flex justify-center items-center bg-gray-200 mt-[150px] sm:mt-0">
+                <div className="w-full lg:max-w-5xl lg:h-[800px] bg-white py-10 flex flex-col items-center md:max-w-3xl lg:ml-[300px] md:ml-0 p-2">
                     {/* 전체 프로젝트 이미지 목록 */}
                     <div className="w-full h-full flex flex-wrap gap-5 justify-center items-center">
                         {images.map((image) => (
@@ -94,7 +94,7 @@ export default function Project() {
                         onClick={closePopup}
                     >
                         <div
-                            className="relative bg-white w-[700px] h-[700px] p-5 rounded-lg shadow-lg"
+                            className="relative bg-white md:w-[600px] w-[370px] p-5 rounded-lg shadow-lg"
                             onClick={(e) => e.stopPropagation()}
                         >
                             <button
@@ -107,23 +107,33 @@ export default function Project() {
                                 <img
                                     src={popupImage.src}
                                     alt="팝업 이미지"
-                                    className="w-[400px] h-[200px] object-cover rounded-lg"
+                                    className="md:w-[400px] md:h-[200px] w-[200px] h-[100px] object-cover rounded-lg"
                                 />
-                                <div className="w-full h-full mt-5 flex flex-col items-start gap-4 p-10">
-                                    <span className="font-semibold text-xl">주제: {popupImage.title}</span>
-                                    <span className="font-semibold text-xl">계획 의도: {popupImage.intention}</span>
-                                    <span className="font-semibold text-xl">기대 효과: {popupImage.effect}</span>
+                                <div className="w-full h-full mt-5 flex flex-col items-start gap-4 p-10 break-all">
+                                    <span className="font-semibold md:text-xl text-sm p-2">
+                                        주제: {popupImage.title}
+                                    </span>
+                                    <span className="font-semibold md:text-xl text-sm p-2">
+                                        계획 의도: {popupImage.intention}
+                                    </span>
+                                    <span className="font-semibold md:text-xl text-sm p-2">
+                                        기대 효과: {popupImage.effect}
+                                    </span>
                                     {popupImage.role && (
-                                        <span className="font-semibold text-xl">담당 직무: {popupImage.role}</span>
+                                        <span className="font-semibold md:text-xl text-sm p-2">
+                                            담당 직무: {popupImage.role}
+                                        </span>
                                     )}
-                                    <span className="font-semibold text-xl">사용 스킬: {popupImage.skills}</span>
-                                    <span className="font-semibold text-xl">
+                                    <span className="font-semibold md:text-xl text-sm p-2">
+                                        사용 스킬: {popupImage.skills}
+                                    </span>
+                                    <span className="font-semibold md:text-xl text-sm p-2">
                                         주소:{' '}
                                         <a
                                             href={popupImage.url}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-blue-500 hover:underline"
+                                            className="text-blue-500 hover:underline break-all"
                                         >
                                             {popupImage.url}
                                         </a>
