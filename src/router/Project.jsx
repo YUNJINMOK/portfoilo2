@@ -71,7 +71,7 @@ export default function Project() {
 
     return (
         <Layout>
-            <div className="w-full h-screen flex justify-center items-center bg-gray-200 mt-[150px] sm:mt-0">
+            <div className="w-full min-h-screen flex justify-center items-center bg-gray-200 mt-[80px] md:mt-0">
                 <div className="w-full lg:max-w-5xl lg:h-[800px] bg-white py-10 flex flex-col items-center md:max-w-3xl lg:ml-[300px] md:ml-0 p-2">
                     {/* 전체 프로젝트 이미지 목록 */}
                     <div className="w-full h-full flex flex-wrap gap-5 justify-center items-center">
@@ -90,11 +90,11 @@ export default function Project() {
                 {/* 팝업 창 */}
                 {isPopupOpen && (
                     <div
-                        className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+                        className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center min-h-screen"
                         onClick={closePopup}
                     >
                         <div
-                            className="relative bg-white md:w-[600px] w-[370px] p-5 rounded-lg shadow-lg"
+                            className="relative bg-white md:w-[600px] w-[360px] p-5 rounded-lg shadow-lg max-h-[70vh] overflow-y-auto lg:max-h-none lg:overflow-visible"
                             onClick={(e) => e.stopPropagation()}
                         >
                             <button

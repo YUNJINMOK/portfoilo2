@@ -7,9 +7,9 @@ export default function About() {
 
     return (
         <Layout>
-            <div className="w-full bg-gray-200 overflow-hidden mt-[60px] lg:mt-0">
-                <div className="w-full h-screen ">
-                    <div className=" w-full h-screen bg-gray-200  overflow-hidden">
+            <div className="w-full bg-gray-200  mt-[60px] lg:mt-0">
+                <div className="w-full lg:h-screen ">
+                    <div className=" w-full lg:h-screen h-[900px] bg-gray-200 overflow-hidden">
                         <div className="w-full h-full lg:ml-[300px] lg:flex justify-center p-8">
                             <div className="lg:max-w-4xl w-full h-full bg-white mr-[300px]  flex justify-center rounded-xl shadow-lg">
                                 <div className="w-1/3 h-full bg-blue-100 md:flex md:flex-col items-center py-10 hidden ">
